@@ -13,36 +13,21 @@ class Routes {
 	nonComponentRoutes;
 
 	constructor({
-		// rootComponentPath,
 		appBundleName,
 		bundles = [],
 		middlewares = [],
 		policies = [],
 		nonComponentRoutes = [],
-		// middlewarePath,
-		// policyPath,
 	}) {
 		this.nonComponentRoutes = nonComponentRoutes;
 		this.Middlewares = new Middlewares(middlewares);
 		this.Policies = new Policies(policies);
 		this.Bundle = new Bundle(bundles, { appBundleName });
 
-		// this.Bundle = new Bundle(
-		// 	requireContext(
-		// 		rootComponentPath,
-		// 		true,
-		// 		new RegExp(escapeStringRegExp(appBundleName))
-		// 	),
-		// 	{
-		// 		appBundleName,
-		// 	}
-		// );
-		console.log("rr:", this.Bundle.routes);
 		this.init();
 	}
 
 	init() {
-		console.log("TITITITITIRTI");
 		this.all = fixRouteOrder(
 			this.Bundle.routes
 				.map((route) =>
@@ -65,7 +50,6 @@ class Routes {
 				)
 				.concat(this.nonComponentRoutes)
 		);
-		console.log("all:", this.all);
 		this.ssr = this.all
 			.filter((route) => route.ssr === true)
 			.map((route) => ({
