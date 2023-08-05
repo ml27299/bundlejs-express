@@ -3,7 +3,7 @@ import Policies from "./Policies";
 import Bundle from "./Bundle";
 
 import required from "../libs/required";
-import { fixRouteOrder } from "bundlejs/dist/utils";
+import { fixRouteOrder } from "@bundlejs/core/dist/utils";
 
 const { NODE_ENV } = process.env;
 class Routes {

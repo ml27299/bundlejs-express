@@ -1,4 +1,4 @@
-import { isFunction, isString } from "bundlejs/dist/utils";
+import { isFunction, isString } from "@bundlejs/core/dist/utils";
 import required from "../libs/required";
 
 class Middlewares {

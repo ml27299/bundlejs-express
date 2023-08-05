@@ -1,4 +1,4 @@
-import Bundle from "bundlejs";
+import Bundle from "@bundlejs/core";
 
 class BundleProxy {
 	values = [];
