@@ -3,7 +3,6 @@ export default (route) => async (req, res, next) => {
 		if (!route.model || route.model.length === 0) return next();
 
 		const data = req.staticContext;
-		console.log("data", data);
 		const responses = await Promise.all(
 			route.model.filter((model) => !!model).map((model) => model(data))
 		);
