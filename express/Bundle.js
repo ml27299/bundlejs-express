@@ -19,9 +19,7 @@ class BundleProxy {
 	}
 
 	keys() {
-		return this.values
-			.filter((bundle) => !!bundle.value.hasResources)
-			.map((bundle) => bundle.path);
+		return this.values.map((bundle) => bundle.path);
 	}
 }
 
