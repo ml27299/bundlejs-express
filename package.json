@@ -1,6 +1,6 @@
 {
 	"name": "@bundlejs/express",
-	"version": "0.0.6",
+	"version": "0.1.0",
 	"engines": {
 		"node": ">=10.15.0",
 		"npm": ">=6.9.0"
